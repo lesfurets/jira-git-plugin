@@ -444,20 +444,20 @@ public class GitManagerImpl implements GitManager {
 		return FileDiff.compute(fileWalker, entry);
 	}
 
-	public void fetch() {
-
+	public Collection<String> fetch() {
+		List<String> result = new ArrayList<String>();
 		try {
 			Transport tn = Transport.open(repository, getOrigin());
 			final FetchResult r;
 			List<RefSpec> toget = new ArrayList<RefSpec>();
-			toget.add(new RefSpec("refs/heads/*:refs/heads/*"));
+			toget.add(new RefSpec("+refs/heads/*:refs/heads/*"));
 			try {
 				r = tn.fetch(new TextProgressMonitor(), toget);
 
 				if (r.getTrackingRefUpdates().isEmpty()) {
 					if (log.isDebugEnabled())
 						log.debug("No updates");
-					return;
+					return result;
 				}
 			} finally {
 				tn.close();
@@ -477,7 +477,9 @@ public class GitManagerImpl implements GitManager {
 				if (!shownURI) {
 					shownURI = true;
 				}
-
+				if (u.getResult() == RefUpdate.Result.FORCED || u.getResult() == RefUpdate.Result.RENAMED) {
+					result.add(dst);
+				}
 				if (log.isDebugEnabled())
 					log.debug(String.format(" %c %-17s %-10s -> %s", type, longType, src, dst));
 			}
@@ -485,6 +487,7 @@ public class GitManagerImpl implements GitManager {
 			// TODO Auto-generated catch block
 			log.warn("", e);
 		}
+		return result;
 
 	}
 
