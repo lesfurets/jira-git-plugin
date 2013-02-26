@@ -12,6 +12,13 @@
     <version>0.6.4.8-SNAPSHOT</version>
     <name>JIRA Git plugin</name>
     <packaging>atlassian-plugin</packaging>
+
+    <scm>
+      <connection>scm:git:https://github.com/lesfurets/jira-git-plugin.git</connection>
+      <developerConnection>scm:git:https://github.com/lesfurets/jira-git-plugin.git</developerConnection>
+      <url>https://github.com/lesfurets/jira-git-plugin</url>
+    </scm>
+
     <properties>
         <jira.version>5.2.3</jira.version>
         <jira.data.version>5.2.3</jira.data.version>
