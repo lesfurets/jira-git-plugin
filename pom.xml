@@ -2,14 +2,19 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.courtanet</groupId>
+    <artifactId>courtanet-parent</artifactId>
+    <version>4</version>
+  </parent>
     <groupId>com.xiplink.jira.git</groupId>
     <artifactId>jira-git-plugin</artifactId>
-    <version>0.6.4.7</version>
+    <version>0.6.4.8-SNAPSHOT</version>
     <name>JIRA Git plugin</name>
     <packaging>atlassian-plugin</packaging>
     <properties>
-        <jira.version>5.0.1</jira.version>
-        <jira.data.version>5.0.1</jira.data.version>
+        <jira.version>5.2.3</jira.version>
+        <jira.data.version>5.2.3</jira.data.version>
         <amps.version>4.0</amps.version>
     </properties>
     <description>Git Jira plugin</description>
@@ -91,34 +96,8 @@
             <organizationUrl>http://www.com-ut.com</organizationUrl>
         </developer>
     </developers>
-    <scm>
-        <connection>scm:svn:https://studio.plugins.atlassian.com/svn/JGIT</connection>
-        <developerConnection>scm:svn:https://studio.plugins.atlassian.com/svn/JGIT</developerConnection>
-    </scm>
-    <distributionManagement>
-        <repository>
-            <id>atlassian-contrib</id>
-            <name>Atlassian Contrib Repository</name>
-            <url>davs://maven.atlassian.com/contrib</url>
-        </repository>
-        <snapshotRepository>
-            <id>atlassian-contrib-snapshot</id>
-            <name>Atlassian Contrib Snapshot Repository</name>
-            <url>davs://maven.atlassian.com/contrib-snapshot</url>
-        </snapshotRepository>
-    </distributionManagement>
-    <repositories>
-        <repository>
-            <id>atlassian-public-repository</id>
-            <url>http://maven.atlassian.com/repository/public</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>atlassian-public-repository</id>
-            <url>https://maven.atlassian.com/content/groups/public</url>
-        </pluginRepository>
-    </pluginRepositories>
+    
+    
     <build>
         <plugins>
             <plugin>
