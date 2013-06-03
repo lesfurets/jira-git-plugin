@@ -1,3 +1,5 @@
+#disable_html_escaping()
+
 <style type="text/css">
 .gitcommit h3 {
 	font-size: 15px;
@@ -37,7 +39,7 @@ margin-bottom: .5em;
 	color: #222;
 }
 </style>
-    #disable_html_escaping()
+
 		<div class="module gitcommit">
 			<div class="mod-header">
 				#if ($git.linkRenderer.getRevisionHref($git.revision))

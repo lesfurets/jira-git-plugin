@@ -1,3 +1,4 @@
+#disable_html_escaping()
 <!-- Start of the git Project Tab -->
 <style type="text/css">
 .gitcommit h3 {
@@ -39,6 +40,7 @@ margin-bottom: .5em;
 	color: #222;
 }
 </style>
+
 <div class="projectPanel">
 <!--
     <div class="header">
