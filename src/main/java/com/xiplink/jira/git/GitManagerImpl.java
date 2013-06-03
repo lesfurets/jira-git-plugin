@@ -230,8 +230,7 @@ public class GitManagerImpl implements GitManager {
 //					log.debug("Retrieved #" + logEntry.getId() + " : " + logEntry.getShortMessage());
 //				}
 
-				if (TextUtils.stringSet(logEntry.getFullMessage())
-						&& JiraKeyUtils.isKeyInString(StringUtils.upperCase(logEntry.getFullMessage()))) {
+				if (TextUtils.stringSet(logEntry.getFullMessage())) {
 					logEntries.add(logEntry);
 				}
 			}

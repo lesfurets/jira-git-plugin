@@ -15,7 +15,8 @@ public interface MultipleGitRepositoryManager extends Startable {
 	String GIT_REPOSITORY_NAME = "git.display.name";
 	String GIT_REVISION_INDEXING_KEY = "revision.indexing";
 	String GIT_REVISION_CACHE_SIZE_KEY = "revision.cache.size";
-	String GIT_BRANCH_INDEXED_REVISION = "branch.";
+    String GIT_BRANCH_INDEXED_REVISION = "branch.";
+    String GIT_BRANCH_MATCH_PATTERNS = "branch.match.patterns";
 
 	String GIT_LINKFORMAT_TYPE = "linkformat.type";
 	String GIT_LINKFORMAT_CHANGESET = "linkformat.changeset";

@@ -9,12 +9,12 @@
   </parent>
     <groupId>com.xiplink.jira.git</groupId>
     <artifactId>jira-git-plugin</artifactId>
-    <version>0.6.4.8-SNAPSHOT</version>
+    <version>0.6.4.9-SNAPSHOT</version>
     <name>JIRA Git plugin</name>
     <packaging>atlassian-plugin</packaging>
 
     <scm>
-      <connection>scm:git:https://github.com/lesfurets/jira-git-plugin.git</connection>
+<!--       <connection>scm:git:https://github.com/lesfurets/jira-git-plugin.git</connection> -->
       <developerConnection>scm:git:https://github.com/lesfurets/jira-git-plugin.git</developerConnection>
       <url>https://github.com/lesfurets/jira-git-plugin</url>
     </scm>
@@ -42,7 +42,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.8.1</version>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
         <dependency>

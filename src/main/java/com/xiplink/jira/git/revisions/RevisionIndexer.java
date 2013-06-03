@@ -66,6 +66,7 @@ public class RevisionIndexer {
     private final ServiceManager serviceManager;
     private final IndexPathManager indexPathManager;
     private final LuceneIndexAccessor indexAccessor;
+    private SimpleBranchFilter defaultBranchFilter;
 
     public RevisionIndexer(
             MultipleGitRepositoryManager multipleGitRepositoryManager,
@@ -94,6 +95,7 @@ public class RevisionIndexer {
         this.indexAccessor = accessor;
         this.serviceManager = serviceManager;
         this.indexPathManager = indexPathManager;
+        this.defaultBranchFilter = new SimpleBranchFilter("trunk", "LF_", "AMX_", "stable", "master");
     }
 
     public void start() {
@@ -164,11 +166,8 @@ public class RevisionIndexer {
      *             if there is some problem in the indexing subsystem meaning indexes cannot be updated.
      */
     public void updateIndex() throws IndexException, IOException {
-        updateIndex(new BranchFilter() {
-            public Collection<String> filter(Collection<String> branches) {
-                return branches;
-            }
-        });
+        //By default some branches are filtered
+        updateIndex(defaultBranchFilter);
     }
 
     public void updateIndex(final String branchName) throws IndexException, IOException {
@@ -181,10 +180,6 @@ public class RevisionIndexer {
                 }
             }
         });
-    }
-
-    private interface BranchFilter {
-        Collection<String> filter(Collection<String> branches);
     }
 
     private void updateIndex(BranchFilter branchFilter) throws IndexException, IOException {

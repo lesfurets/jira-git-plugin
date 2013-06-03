@@ -32,7 +32,7 @@ public class RevisionIndexService extends AbstractService
             }
             else
             {
-                log.warn("Tried to index changes but SubversionManager has no revision indexer?");
+                log.warn("Tried to index changes but GitRepositoryManager has no revision indexer?");
             }
         }
         catch (Throwable t)
