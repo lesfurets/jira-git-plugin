@@ -9,7 +9,7 @@
   </parent>
     <groupId>com.xiplink.jira.git</groupId>
     <artifactId>jira-git-plugin</artifactId>
-    <version>0.6.4.9-SNAPSHOT</version>
+    <version>0.6.4.10-SNAPSHOT</version>
     <name>JIRA Git plugin</name>
     <packaging>atlassian-plugin</packaging>
 
@@ -20,12 +20,12 @@
     </scm>
 
     <properties>
-        <jira.version>5.2.3</jira.version>
-        <jira.data.version>5.2.3</jira.data.version>
+        <jira.version>6.0.1</jira.version>
+        <jira.data.version>6.0.1</jira.data.version>
         <amps.version>4.0</amps.version>
     </properties>
     <description>Git Jira plugin</description>
-    <url>https://studio.plugins.atlassian.com/wiki/display/JGIT/JIRA+Git+Plugin</url>
+    <url>https://github.com/lesfurets/jira-git-plugin</url>
     <dependencies>
         <dependency>
             <groupId>com.atlassian.jira</groupId>
