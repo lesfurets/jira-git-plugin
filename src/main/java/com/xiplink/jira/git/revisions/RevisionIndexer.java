@@ -95,7 +95,7 @@ public class RevisionIndexer {
         this.indexAccessor = accessor;
         this.serviceManager = serviceManager;
         this.indexPathManager = indexPathManager;
-        this.defaultBranchFilter = new SimpleBranchFilter("trunk", "LF_", "AMX_", "stable", "master");
+        this.defaultBranchFilter = new SimpleBranchFilter("trunk", "LF_", "AMX_", "stable", "master", "features");
     }
 
     public void start() {
