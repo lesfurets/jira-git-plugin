@@ -9,7 +9,7 @@
   </parent>
     <groupId>com.xiplink.jira.git</groupId>
     <artifactId>jira-git-plugin</artifactId>
-    <version>0.6.4.10_LF02-SNAPSHOT</version>
+    <version>0.6.4.10_LF03-SNAPSHOT</version>
     <name>JIRA Git plugin</name>
     <packaging>atlassian-plugin</packaging>
 
